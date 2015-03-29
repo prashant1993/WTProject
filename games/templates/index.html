@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Game based Website">
+    <meta name="author" content="Prashant Shrivastava , Piyush Thirani, Rahul Jain">
+
+    <title>Games Website</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="static/css/gameswebsite.css" rel="stylesheet">
+    
+    <!-- Custom Fonts -->
+    <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="static/fonts/fonts_1.css" rel="stylesheet" type="text/css">
+    <link href="static/fonts/fonts_2.css" rel="stylesheet" type="text/css">
+    <link href="static/fonts/stylesheet.css" rel="stylesheet" type="text/css">
+
+    <script language="javascript" src="static/js/jquery_mini.js"></script>
+    <script language="javascript" src="static/js/jquery.dimensions.js"></script>
+
+    <style>
+    @media screen and (min-width: 768px) {
+    
+    #myModal .modal-dialog  {width:500px;}
+
+    #myModal .modal-backdrop {background-color: #E7E5D9;}
+    }
+
+    #myModal
+    {
+        font-family: new_font;
+        color : #b62f33;
+
+    }
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <i class="fa fa-play-circle"></i>  <span class="light">Home</span> Page
+                </a>
+            </div>
+
+            <!--.nav bar -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#tech">Technology Used</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#team">Team</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Sign In/Register</a>
+                    </li>                  
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    
+    <!-- Modal -->
+
+<font color="red">
+    <div class="modal fade bs-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <br>
+            <div class="bs-example bs-example-tabs">
+                <ul id="myTab" class="nav nav-tabs">
+                  <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
+                  <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+                  <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
+                </ul>
+            </div>
+          <div class="modal-body">
+            <div id="myTabContent" class="tab-content">
+            
+            <div class="tab-pane fade in" id="why">
+                
+                <p>
+                We need this information so that you can receive access to the site and its content. Rest assured your information will not be sold, traded, or given to anyone.</p> 
+                <br>
+                <p> Please contact <a mailto:href="contact@gameswebsite.com">contact@gameswebsite.com</a> for any other inquiries.
+                </p> 
+                
+            </div>
+
+            <div class="tab-pane fade active in" id="signin">
+                <form class="form-horizontal">
+                <fieldset>
+                <!-- Sign In Form -->
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="userid">Alias:</label>
+                  <div class="controls">
+                    <input required="" id="userid" name="userid" type="text" class="form-control" placeholder="Tarzan" class="input-medium" required="">
+                  </div>
+                </div>
+
+                <!-- Password input-->
+                <div class="control-group">
+                  <label class="control-label" for="passwordinput">Password:</label>
+                  <div class="controls">
+                    <input required="" id="passwordinput" name="passwordinput" class="form-control" type="password" placeholder="********" class="input-medium">
+                  </div>
+                </div>
+
+                <!-- Multiple Checkboxes (inline) -->
+                <div class="control-group">
+                  <label class="control-label" for="rememberme"></label>
+                  <div class="controls">
+                    <label class="checkbox inline" for="rememberme-0" style="padding: 0 0 0 20px;">
+                      <input type="checkbox" name="rememberme" id="rememberme-0" value="Remember me">
+                      Remember me
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Button -->
+                <div class="control-group">
+                  <label class="control-label" for="signin"></label>
+                  <div class="controls">
+                    <button id="signin" name="signin" class="btn btn-success">Sign In</button>
+                  </div>
+                </div>
+                </fieldset>
+                </form>
+            </div>
+            <div class="tab-pane fade" id="signup">
+                <form class="form-horizontal">
+                <fieldset>
+                <!-- Sign Up Form -->
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="Email">Email:</label>
+                  <div class="controls">
+                    <input id="Email" name="Email" class="form-control" type="text" placeholder="tarzan@gmail.com" class="input-large" required="">
+                  </div>
+                </div>
+                
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="userid">Alias:</label>
+                  <div class="controls">
+                    <input id="userid" name="userid" class="form-control" type="text" placeholder="Tarzan" class="input-large" required="">
+                  </div>
+                </div>
+                
+                <!-- Password input-->
+                <div class="control-group">
+                  <label class="control-label" for="password">Password:</label>
+                  <div class="controls">
+                    <input id="password" name="password" class="form-control" type="password" placeholder="********" class="input-large" required="">
+                    <em>1-8 Characters</em>
+                  </div>
+                </div>
+                
+                <!-- Text input-->
+                <div class="control-group">
+                  <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
+                  <div class="controls">
+                    <input id="reenterpassword" class="form-control" name="reenterpassword" type="password" placeholder="********" class="input-large" required="">
+                  </div>
+                </div>
+                
+                <!-- Multiple Radios (inline) -->
+                <br>
+                <div class="control-group">
+                  <label class="control-label" for="humancheck" >Humanity Check:</label>
+                  <div class="controls">
+                    <label class="radio inline" for="humancheck-0" style="padding: 0 0 0 20px;">
+                      <input type="radio" name="humancheck" id="humancheck-0" value="robot" checked="checked" >I'm a Robot</label>
+                    <label class="radio inline" for="humancheck-1" style="padding: 0 0 0 20px;">
+                      <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
+                  </div>
+                </div>
+                
+                <!-- Button -->
+                <div class="control-group">
+                  <label class="control-label" for="confirmsignup"></label>
+                  <div class="controls">
+                    <button id="confirmsignup" name="confirmsignup" class="btn btn-success">Sign Up</button>
+                  </div>
+                </div>
+                </fieldset>
+                </form>
+          </div>
+        </div>
+          </div>
+          <div class="modal-footer">
+          <center>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </center>
+          </div>
+        </div>
+      </div>
+    </div>
+    </font>
+    <!--
+    <div class="container">
+    <div id="floatMenu">
+        <ul class="menu1">
+        Menu 1
+        </ul>
+     
+        <ul class="menu2">
+        Menu 2
+        </ul>
+     
+        <ul class="menu3">
+        Menu 3
+        </ul>
+    </div>
+    </div>
+    -->
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                    <img src='static/img/space-suit.png' height="25%" width="25%">
+                        <h1 class="brand-heading">Mingle Games</h1>
+                        <p class="intro-text">A Web Technology<br>Project</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Project</h2>
+                <p>Here we have stacked a group of games which can be played online.</p>
+                <p>One can find the link to codes for the <a href="#">Games</a> on Github.</p>
+                <p>Most of them are based on Javascript.</p>
+                <p>
+                    <a href="{{url_for('spacegame')}}"> <span> <img src='static/img/barbute.png' width = "100px" height="100px"> </span> </a>
+                    <a href="#"> <span> <img src='static/img/beech.png' width = "100px" height="100px"> </span> </a>
+                    <a href="#"> <span> <img src='static/img/blade-bite.png' width = "100px" height="100px"> </span> </a>
+                    <a href="#"> <span> <img src='static/img/bolter-gun.png' width = "100px" height="100px"> </span> </a>
+                    <a href="#"> <span> <img src='static/img/bookmarklet.png' width = "100px" height="100px"> </span> </a>
+                </p>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- technology Section -->
+    <section id="tech">
+        <div class="download-section">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2" width="100%">
+                    <h2><font color="black">Technology</font></h2>
+                    <p>
+                    <span> <img src='static/img/flask.png' width = "240px" height="80px"> </span>
+                    <span> <img src='static/img/bootstrap.png' width = "180px" height="90px"> </span> 
+                    </p>
+
+                    <p>
+                    <span><img src='static/img/HTML5_logo.png' width = "80px" height="80px"> </span>
+                    <span> <img src='static/img/js.png' width = "80px" height="80px"> </span> 
+                    <span> <img src='static/img/mongodb.png' width = "110px" height="120px"> </span>
+                    </p>
+                    <p> <font color = "black" size="6">
+                    Hunt for Perfection !
+                    </font>
+                    </p>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="team" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact Students</h2>
+                
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://facebook.com/prashant19" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Prashant Shrivastava</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/piyush.thirani" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Piyush Thirani</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/profile.php?id=100003153916016&fref=ts" class="btn btn-default btn-lg" target="_blank"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Rahul Jain</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div id="map"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Games Website 2015</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="static/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="static/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="static/js/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="static/js/gameswebsite.js"></script>
+
+</body>
+
+</html>

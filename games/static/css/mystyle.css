@@ -1,0 +1,70 @@
+body
+{
+background: url('img/sky.jpg') top no-repeat fixed;
+background-size: cover;
+}
+
+ul
+{
+list-style-image: url('img/rocket.png');
+}
+
+p
+{
+color:white;
+text-align:center;
+letter-spacing:4px;
+font-family:"sans-serif",Georgia,Serif;
+font-size:22px;
+position:relative;
+width:380px;
+margin:auto;
+visibility:hidden;
+}
+
+#main
+{
+position:relative;
+margin-left: auto;
+margin-right: auto;
+height:500px;
+width:500px;
+
+}
+
+#main > *
+{
+border: 2px solid grey;
+margin: 4px;
+width: 50px;
+height: 50px;
+float: left;
+}
+
+#main>div:nth-child(7n+1)
+{
+clear:both;
+}
+
+img
+{
+position:relative;
+visibility:hidden;
+}
+
+.new_li
+{
+position:relative;
+margin-bottom:20px;
+cursor:pointer;
+border-radius: 1.5em;
+font-size:22px;
+font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+color:rgba(200, 100, 250, 0.9);
+text-align:center;
+}
+
+#result
+{
+font-size:40px;
+}
