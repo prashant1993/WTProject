@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>FLIP GAME</title>
+
+<link rel="stylesheet" type="text/css" href="static/css/flipstyle.css">
+
+<script src="static/js/flipgame.js"></script>
+
+</head>
+
+<body onload="animation()">
+<div id="header">
+<img id="fireball">
+<h1 id="title">FLIP GAME</h1>
+<img id="fireball2">
+</div>
+
+<table id="table" border="1">
+
+<tr>
+<td id="11" style="background-color:white;" onclick="clicked(1,1)"></td> <!--need to write script...explicitly otherwise it does not return the color in script-->
+<td id="12" style="background-color:white;" onclick="clicked(1,2)"></td>
+<td id="13" style="background-color:white;" onclick="clicked(1,3)"></td>
+<td id="14" style="background-color:white;" onclick="clicked(1,4)"></td>
+<td id="15" style="background-color:white;" onclick="clicked(1,5)"></td>
+</tr>
+
+<tr>
+<td id="21" style="background-color:white;" onclick="clicked(2,1)"></td>
+<td id="22" style="background-color:white;" onclick="clicked(2,2)"></td>
+<td id="23" style="background-color:white;" onclick="clicked(2,3)"></td>
+<td id="24" style="background-color:white;" onclick="clicked(2,4)"></td>
+<td id="25" style="background-color:white;" onclick="clicked(2,5)"></td>
+</tr>
+
+<tr>
+<td id="31" style="background-color:white;" onclick="clicked(3,1)"></td>
+<td id="32" style="background-color:white;" onclick="clicked(3,2)"></td>
+<td id="33" style="background-color:white;" onclick="clicked(3,3)"></td>
+<td id="34" style="background-color:white;" onclick="clicked(3,4)"></td>
+<td id="35" style="background-color:white;" onclick="clicked(3,5)"></td>
+</tr>
+
+<tr>
+<td id="41" style="background-color:white;" onclick="clicked(4,1)"></td>
+<td id="42" style="background-color:white;" onclick="clicked(4,2)"></td>
+<td id="43" style="background-color:white;" onclick="clicked(4,3)"></td>
+<td id="44" style="background-color:white;" onclick="clicked(4,4)"></td>
+<td id="45" style="background-color:white;" onclick="clicked(4,5)"></td>
+</tr>
+
+</table>
+
+<button onclick="generate()">Start New Game</button>
+<button onclick="test_soln()">Show/Hide Solution</button>
+<button onclick="reset()">Reset</button>
+
+<p id="tocheck"></p>
+
+<p id="solution"></p>
+<p id="result"></p>
+
+
+
+</body>
+</html>

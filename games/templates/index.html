@@ -101,7 +101,7 @@
             <div class="bs-example bs-example-tabs">
                 <ul id="myTab" class="nav nav-tabs">
                   <li class="active"><a href="#signin" data-toggle="tab">Sign In</a></li>
-                  <li class=""><a href="#signup" data-toggle="tab">Register</a></li>
+                  <li class=""><a href="#sign-up" data-toggle="tab">Register</a></li>
                   <li class=""><a href="#why" data-toggle="tab">Why?</a></li>
                 </ul>
             </div>
@@ -119,7 +119,7 @@
             </div>
 
             <div class="tab-pane fade active in" id="signin">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method='post' action="{{ url_for('homepage') }}">
                 <fieldset>
                 <!-- Sign In Form -->
                 <!-- Text input-->
@@ -159,8 +159,8 @@
                 </fieldset>
                 </form>
             </div>
-            <div class="tab-pane fade" id="signup">
-                <form class="form-horizontal">
+            <div class="tab-pane fade" id="sign-up">
+                <form class="form-horizontal" method='post' action="{{ url_for('homepage') }}">
                 <fieldset>
                 <!-- Sign Up Form -->
                 <!-- Text input-->
@@ -189,6 +189,7 @@
                 </div>
                 
                 <!-- Text input-->
+                <!---
                 <div class="control-group">
                   <label class="control-label" for="reenterpassword">Re-Enter Password:</label>
                   <div class="controls">
@@ -196,7 +197,7 @@
                   </div>
                 </div>
                 
-                <!-- Multiple Radios (inline) -->
+                 Multiple Radios (inline) 
                 <br>
                 <div class="control-group">
                   <label class="control-label" for="humancheck" >Humanity Check:</label>
@@ -207,7 +208,7 @@
                       <input type="radio" name="humancheck" id="humancheck-1" value="human">I'm Human</label>
                   </div>
                 </div>
-                
+                -->
                 <!-- Button -->
                 <div class="control-group">
                   <label class="control-label" for="confirmsignup"></label>
@@ -275,8 +276,8 @@
                 <p>Most of them are based on Javascript.</p>
                 <p>
                     <a href="{{url_for('spacegame')}}"> <span> <img src='static/img/barbute.png' width = "100px" height="100px"> </span> </a>
-                    <a href="#"> <span> <img src='static/img/beech.png' width = "100px" height="100px"> </span> </a>
-                    <a href="#"> <span> <img src='static/img/blade-bite.png' width = "100px" height="100px"> </span> </a>
+                    <a href="{{url_for('flipgame')}}"> <span> <img src='static/img/beech.png' width = "100px" height="100px"> </span> </a>
+                    <a href="{{url_for('floodit')}}"> <span> <img src='static/img/blade-bite.png' width = "100px" height="100px"> </span> </a>
                     <a href="#"> <span> <img src='static/img/bolter-gun.png' width = "100px" height="100px"> </span> </a>
                     <a href="#"> <span> <img src='static/img/bookmarklet.png' width = "100px" height="100px"> </span> </a>
                 </p>

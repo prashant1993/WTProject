@@ -1,5 +1,5 @@
+var start_time = 0;
 var l=3,played=0;
-
 var list=[[l,l,l,l,l,l,l],[l,0,0,0,0,0,l],[l,0,0,0,0,0,l],[l,0,0,0,0,0,l],[l,0,0,0,0,0,l],[l,0,0,0,0,0,l],[l,l,l,l,l,l,l]];
 var down=1,right=1,up=0,left=0,currentrow=1,currentcolumn=1,userrow=1,usercolumn=1;
 var t=0,win=0,dead=0;
@@ -11,6 +11,8 @@ var element=document.createElement("img");
   element.setAttribute("width","100%");
   element.setAttribute("height","100%");
   element.setAttribute("style","visibility: visible; top: 0px; left: 0px; display: inline-block; height: 50px; width: 50px;")
+
+var mytimer;
 /*
 function startnew()
 {
@@ -21,6 +23,10 @@ start();});
 
 function reset() //cant use location.reload() as javascript gets washed off 
 {
+
+//clearinterval function;
+clearInterval(mytimer);
+start_time = 0;
 list=[[l,l,l,l,l,l,l],[l,0,0,0,0,0,l],[l,0,0,0,0,0,l],[l,0,0,0,0,0,l],[l,0,0,0,0,0,l],[l,0,0,0,0,0,l],[l,l,l,l,l,l,l]];
 down=right=currentrow=currentcolumn=userrow=usercolumn=1;
 up=left=t=win=dead=0;
@@ -52,7 +58,6 @@ $(document).ready(function(){
 
 function start()
 {
-	
 	
 if (played!=0) reset();
 else 
@@ -140,7 +145,7 @@ function generate()
  }
 document.getElementById("55").style.backgroundColor="green";
 document.getElementById(""+r1+""+r2).style.backgroundColor="red";
-
+mytimer = setInterval(function(){ timer() }, 1000);
 } 
 
 function colourchange(a,b)
@@ -220,6 +225,7 @@ function checkdead(a,b)
 {
  if (a<=0||a>=6||b<=0||b>=6||list[a][b]==0)
  {
+clearInterval(mytimer);
  $(document).ready(function(){
   $("img").animate({height:'0px',width:'0px',left:'+=25px',top:'+=25px'},750,function(){
    document.getElementById("result").style.visibility="visible";
@@ -243,8 +249,15 @@ function checkwin()
   
  if(win==l+1) 
  {
+ clearInterval(mytimer);
  document.getElementById("result").style.visibility="visible";
  document.getElementById("result").innerHTML=("YOU WON!!");//l of (1,1) & 1 of (5,5)
  dead=1;
  }
+}
+
+function timer()
+{
+  start_time = start_time + 1;
+  document.getElementById("gametimer").innerHTML = start_time;
 }
